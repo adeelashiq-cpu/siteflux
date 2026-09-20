@@ -1,0 +1,5 @@
+[build]
+  publish = "."
+
+[context.test]
+  command = "printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > _headers"
