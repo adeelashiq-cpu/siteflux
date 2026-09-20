@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WebLaunch Tools — Free SEO & Website Launch Utilities</title>
+  <meta name="description" content="Free browser-based tools for SEO, website launches and developers: meta tags, SERP preview, robots.txt, schema markup, UTM builder and launch checklist." />
+  <link rel="canonical" href="https://example.com/" />
+  <meta property="og:title" content="WebLaunch Tools" />
+  <meta property="og:description" content="Free SEO and website launch utilities that run in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"WebLaunch Tools",
+    "url":"https://example.com/",
+    "description":"Free SEO and website launch utilities."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="WebLaunch Tools home">
+        <span class="brand-mark">W</span>
+        <span>WebLaunch Tools</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#tools">Tools</a>
+        <a href="#why">Why Us</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-small" href="#tools">Open Tools</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">SEO + Website Launch Toolkit</span>
+          <h1>Launch better websites with <span>simple, fast tools.</span></h1>
+          <p class="hero-copy">Generate SEO metadata, preview Google snippets, create robots.txt rules, build schema markup, track campaigns, and run a launch checklist — all without installing anything.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#tools">Explore tools</a>
+            <a class="btn btn-ghost" href="#meta-generator">Try Meta Generator</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Free to use</span>
+            <span>✓ No signup</span>
+            <span>✓ Runs in your browser</span>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Tool dashboard preview">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <div class="dashboard-card">
+            <div class="mini-label">Website launch score</div>
+            <div class="score-row"><strong>86</strong><span>/100</span></div>
+            <div class="meter"><i style="width:86%"></i></div>
+            <div class="mini-grid">
+              <div><b>SEO</b><span>Ready</span></div>
+              <div><b>Schema</b><span>Valid</span></div>
+              <div><b>Robots</b><span>Checked</span></div>
+              <div><b>Tracking</b><span>Ready</span></div>
+            </div>
+          </div>
+          <div class="floating-card one">SERP Preview <b>✓</b></div>
+          <div class="floating-card two">Schema JSON-LD <b>{ }</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div><strong>6</strong><span>Working tools</span></div>
+        <div><strong>100%</strong><span>Browser based</span></div>
+        <div><strong>0</strong><span>Accounts required</span></div>
+        <div><strong>∞</strong><span>Free usage</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Toolbox</span>
+          <h2>Everything you need before a website goes live.</h2>
+          <p>Each tool works instantly in your browser and is designed for marketers, developers, freelancers and site owners.</p>
+        </div>
+
+        <div class="tool-grid">
+          <a class="tool-card" href="#meta-generator"><span class="icon">MT</span><h3>Meta Tag Generator</h3><p>Create SEO-ready title and description tags.</p><em>Open tool →</em></a>
+          <a class="tool-card" href="#serp-preview"><span class="icon">SP</span><h3>SERP Preview</h3><p>Preview how your page could appear in Google.</p><em>Open tool →</em></a>
+          <a class="tool-card" href="#robots-generator"><span class="icon">RT</span><h3>Robots.txt Generator</h3><p>Create crawl directives and sitemap references.</p><em>Open tool →</em></a>
+          <a class="tool-card" href="#schema-generator"><span class="icon">SC</span><h3>Schema Generator</h3><p>Generate clean JSON-LD for common website types.</p><em>Open tool →</em></a>
+          <a class="tool-card" href="#utm-builder"><span class="icon">UT</span><h3>UTM Builder</h3><p>Create campaign URLs for analytics tracking.</p><em>Open tool →</em></a>
+          <a class="tool-card" href="#launch-checklist"><span class="icon">LC</span><h3>Launch Checklist</h3><p>Track important SEO, UX and launch tasks.</p><em>Open tool →</em></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tools-area">
+      <div class="container stacked-tools">
+        <article class="tool-shell" id="meta-generator">
+          <div class="tool-intro"><span class="tool-kicker">SEO TOOL</span><h2>Meta Tag Generator</h2><p>Create page metadata and copy it directly into your HTML.</p></div>
+          <div class="tool-layout">
+            <div class="form-card">
+              <label>Page title <span id="titleCount">0/60</span></label>
+              <input id="metaTitle" type="text" maxlength="90" placeholder="e.g. Web Design Services in Austin" />
+              <label>Meta description <span id="descCount">0/160</span></label>
+              <textarea id="metaDesc" rows="4" maxlength="220" placeholder="Describe the page in a useful, click-worthy way..."></textarea>
+              <label>Canonical URL</label>
+              <input id="canonicalUrl" type="url" placeholder="https://example.com/page" />
+              <button class="btn action" data-action="generate-meta">Generate tags</button>
+            </div>
+            <div class="output-card">
+              <div class="output-head"><strong>Generated HTML</strong><button class="copy-btn" data-copy="metaOutput">Copy</button></div>
+              <pre id="metaOutput">&lt;!-- Your generated meta tags will appear here --&gt;</pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-shell" id="serp-preview">
+          <div class="tool-intro"><span class="tool-kicker">SEO TOOL</span><h2>SERP Preview</h2><p>See a simplified desktop search snippet before publishing.</p></div>
+          <div class="tool-layout">
+            <div class="form-card">
+              <label>Title</label><input id="serpTitle" placeholder="Your page title" />
+              <label>URL</label><input id="serpUrl" placeholder="https://example.com/your-page" />
+              <label>Description</label><textarea id="serpDesc" rows="4" placeholder="Your meta description"></textarea>
+            </div>
+            <div class="output-card serp-wrap">
+              <div class="google-result">
+                <div id="serpUrlOut" class="g-url">https://example.com/your-page</div>
+                <div id="serpTitleOut" class="g-title">Your page title</div>
+                <div id="serpDescOut" class="g-desc">Your meta description will appear here as a simplified preview.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-shell" id="robots-generator">
+          <div class="tool-intro"><span class="tool-kicker">TECHNICAL SEO</span><h2>Robots.txt Generator</h2><p>Generate a basic robots.txt file with allow/disallow rules.</p></div>
+          <div class="tool-layout">
+            <div class="form-card">
+              <label>User-agent</label><input id="robotAgent" value="*" />
+              <label>Disallow path</label><input id="robotDisallow" placeholder="/admin/" />
+              <label>Allow path</label><input id="robotAllow" placeholder="/public/" />
+              <label>Sitemap URL</label><input id="robotSitemap" placeholder="https://example.com/sitemap.xml" />
+              <button class="btn action" data-action="generate-robots">Generate robots.txt</button>
+            </div>
+            <div class="output-card">
+              <div class="output-head"><strong>robots.txt</strong><button class="copy-btn" data-copy="robotsOutput">Copy</button></div>
+              <pre id="robotsOutput">User-agent: *\nDisallow:</pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-shell" id="schema-generator">
+          <div class="tool-intro"><span class="tool-kicker">STRUCTURED DATA</span><h2>Schema Generator</h2><p>Create JSON-LD for an Organization or Local Business.</p></div>
+          <div class="tool-layout">
+            <div class="form-card">
+              <label>Schema type</label>
+              <select id="schemaType"><option value="Organization">Organization</option><option value="LocalBusiness">Local Business</option></select>
+              <label>Name</label><input id="schemaName" placeholder="Acme Studio" />
+              <label>Website URL</label><input id="schemaUrl" placeholder="https://example.com" />
+              <label>Logo URL</label><input id="schemaLogo" placeholder="https://example.com/logo.png" />
+              <label>Phone</label><input id="schemaPhone" placeholder="+1 555 123 4567" />
+              <button class="btn action" data-action="generate-schema">Generate JSON-LD</button>
+            </div>
+            <div class="output-card">
+              <div class="output-head"><strong>JSON-LD</strong><button class="copy-btn" data-copy="schemaOutput">Copy</button></div>
+              <pre id="schemaOutput">{\n  "@context": "https://schema.org"\n}</pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-shell" id="utm-builder">
+          <div class="tool-intro"><span class="tool-kicker">ANALYTICS</span><h2>UTM Builder</h2><p>Create trackable campaign URLs for Google Analytics and other analytics platforms.</p></div>
+          <div class="tool-layout">
+            <div class="form-card">
+              <label>Website URL</label><input id="utmUrl" placeholder="https://example.com/landing-page" />
+              <label>Campaign source</label><input id="utmSource" placeholder="newsletter" />
+              <label>Campaign medium</label><input id="utmMedium" placeholder="email" />
+              <label>Campaign name</label><input id="utmCampaign" placeholder="summer_launch" />
+              <label>Campaign content (optional)</label><input id="utmContent" placeholder="hero_button" />
+              <button class="btn action" data-action="generate-utm">Build URL</button>
+            </div>
+            <div class="output-card">
+              <div class="output-head"><strong>Campaign URL</strong><button class="copy-btn" data-copy="utmOutput">Copy</button></div>
+              <pre id="utmOutput">Your campaign URL will appear here.</pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-shell" id="launch-checklist">
+          <div class="tool-intro"><span class="tool-kicker">LAUNCH QA</span><h2>Website Launch Checklist</h2><p>Tick tasks as you complete them. Progress is saved locally in your browser.</p></div>
+          <div class="checklist-card">
+            <div class="progress-row"><strong id="progressText">0 of 12 complete</strong><span id="progressPercent">0%</span></div>
+            <div class="meter big"><i id="progressBar" style="width:0%"></i></div>
+            <div id="checklist" class="checklist"></div>
+            <button id="resetChecklist" class="btn btn-ghost reset-btn">Reset checklist</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soft" id="why">
+      <div class="container why-grid">
+        <div><span class="eyebrow">Built for real workflows</span><h2>Useful enough for professionals. Simple enough for everyone.</h2><p>WebLaunch Tools is designed around common tasks that usually require separate websites, browser extensions, or paid SEO suites.</p></div>
+        <div class="benefit-grid">
+          <div><b>Fast</b><span>No account setup or onboarding.</span></div>
+          <div><b>Private</b><span>Most processing happens in your browser.</span></div>
+          <div><b>Focused</b><span>One job per tool, without clutter.</span></div>
+          <div><b>Expandable</b><span>Easy foundation for dozens of future tools.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head left"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+        <details open><summary>Are these tools free?</summary><p>Yes. This starter website is designed around free, browser-based utilities with no account required.</p></details>
+        <details><summary>Do the tools upload my data?</summary><p>The included tools process entered values in the browser. If you later add APIs, file uploads or cloud features, you should clearly document those behaviors.</p></details>
+        <details><summary>Can I add more tools later?</summary><p>Yes. The layout is intentionally modular so you can add new tool cards and full tool sections without rebuilding the site architecture.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark">W</span><span>WebLaunch Tools</span></a><p>Simple utilities for better websites, SEO and launches.</p></div>
+      <div><strong>Tools</strong><a href="#meta-generator">Meta Generator</a><a href="#schema-generator">Schema Generator</a><a href="#utm-builder">UTM Builder</a></div>
+      <div><strong>Website</strong><a href="#why">Why Us</a><a href="#faq">FAQ</a><a href="#top">Back to top</a></div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> WebLaunch Tools. Built for faster launches.</div>
+  </footer>
+
+  <div id="toast" class="toast" role="status">Copied</div>
+  <script src="app.js"></script>
+</body>
+</html>
