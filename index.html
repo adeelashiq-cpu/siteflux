@@ -1,247 +1,701 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Siteflux — Free SEO & Website Launch Utilities</title>
   <meta name="description" content="Free browser-based tools for SEO, website launches and developers: meta tags, SERP preview, robots.txt, schema markup, UTM builder and launch checklist." />
   <link rel="canonical" href="https://example.com/" />
-  <meta property="og:title" content="WebLaunch Tools" />
-  <meta property="og:description" content="Free SEO and website launch utilities that run in your browser." />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Siteflux — Free SEO & Website Launch Utilities" />
+  <meta property="og:description" content="Free client-side developer and SEO launch utilities that run directly in your browser." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com/" />
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Siteflux — Free SEO & Website Launch Utilities" />
+  <meta name="twitter:description" content="Free browser-based tools for SEO, website launches and developers." />
+  
+  <!-- Modern SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%236c5cff'/><text x='50' y='68' font-size='52' font-family='system-ui,sans-serif' font-weight='900' text-anchor='middle' fill='white'>S</text></svg>" type="image/svg+xml" />
+
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"WebLaunch Tools",
-    "url":"https://example.com/",
-    "description":"Free SEO and website launch utilities."
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Siteflux WebLaunch Tools",
+    "url": "https://example.com/",
+    "description": "Free SEO and website launch utilities running entirely in the browser.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "All"
   }
   </script>
 </head>
 <body>
+  <!-- Global Sticky Navigation -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Siteflux home">
         <span class="brand-mark">S</span>
         <span>Siteflux</span>
+        <span class="brand-tagline">WebLaunch Tools</span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#tools">Tools</a>
-        <a href="#why">Why Us</a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <a href="#tools">Toolbox</a>
+        <a href="#why">Why Siteflux</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-small" href="#tools">Open Tools</a>
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle light and dark theme" title="Switch Theme">
+          <!-- Moon Icon (Dark Mode toggle) -->
+          <svg id="themeMoonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode toggle) -->
+          <svg id="themeSunIcon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a class="btn btn-small" href="#tools">Open Tools</a>
+      </div>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">SEO + Website Launch Toolkit</span>
+          <span class="eyebrow">🚀 Complete Website Launch Toolkit</span>
           <h1>Launch better websites with <span>simple, fast tools.</span></h1>
-          <p class="hero-copy">Generate SEO metadata, preview Google snippets, create robots.txt rules, build schema markup, track campaigns, and run a launch checklist — all without installing anything.</p>
+          <p class="hero-copy">Generate SEO metadata, preview Google search snippets, craft robots.txt directives, generate structured JSON-LD schemas, build UTM tracking URLs, and verify launch checklists — all running securely in your browser.</p>
           <div class="hero-actions">
-            <a class="btn" href="#tools">Explore tools</a>
+            <a class="btn" href="#tools">Explore all tools</a>
             <a class="btn btn-ghost" href="#meta-generator">Try Meta Generator</a>
           </div>
           <div class="trust-row">
-            <span>✓ Free to use</span>
-            <span>✓ No signup</span>
-            <span>✓ Runs in your browser</span>
+            <span>✓ 100% Free &amp; Open</span>
+            <span>✓ No Signup Required</span>
+            <span>✓ Private — Runs In-Browser</span>
           </div>
         </div>
         <div class="hero-panel" aria-label="Tool dashboard preview">
           <div class="browser-bar"><span></span><span></span><span></span></div>
           <div class="dashboard-card">
-            <div class="mini-label">Website launch score</div>
-            <div class="score-row"><strong>86</strong><span>/100</span></div>
-            <div class="meter"><i style="width:86%"></i></div>
+            <div class="mini-label">Website Launch Score</div>
+            <div class="score-row"><strong>94</strong><span>/100</span></div>
+            <div class="meter"><i style="width:94%"></i></div>
             <div class="mini-grid">
-              <div><b>SEO</b><span>Ready</span></div>
-              <div><b>Schema</b><span>Valid</span></div>
-              <div><b>Robots</b><span>Checked</span></div>
-              <div><b>Tracking</b><span>Ready</span></div>
+              <div><b>SEO Metadata</b><span>✓ Optimized</span></div>
+              <div><b>Schema Markup</b><span>✓ Valid JSON-LD</span></div>
+              <div><b>Robots &amp; Sitemap</b><span>✓ Configured</span></div>
+              <div><b>UTM Analytics</b><span>✓ Trackable</span></div>
             </div>
           </div>
-          <div class="floating-card one">SERP Preview <b>✓</b></div>
-          <div class="floating-card two">Schema JSON-LD <b>{ }</b></div>
+          <div class="floating-card one">SERP Preview <b>Live</b></div>
+          <div class="floating-card two">Schema Generator <b>JSON-LD</b></div>
         </div>
       </div>
     </section>
 
+    <!-- Stats Bar -->
     <section class="stats-strip">
       <div class="container stats-grid">
-        <div><strong>6</strong><span>Working tools</span></div>
-        <div><strong>100%</strong><span>Browser based</span></div>
-        <div><strong>0</strong><span>Accounts required</span></div>
-        <div><strong>∞</strong><span>Free usage</span></div>
+        <div><strong>6</strong><span>Specialized Tools</span></div>
+        <div><strong>100%</strong><span>Client-Side Processing</span></div>
+        <div><strong>0</strong><span>Accounts or Tracking</span></div>
+        <div><strong>&infin;</strong><span>Unlimited Free Usage</span></div>
       </div>
     </section>
 
+    <!-- Tool Directory Section -->
     <section class="section" id="tools">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Toolbox</span>
-          <h2>Everything you need before a website goes live.</h2>
-          <p>Each tool works instantly in your browser and is designed for marketers, developers, freelancers and site owners.</p>
+          <span class="eyebrow">The Toolbox</span>
+          <h2>Everything you need before going live.</h2>
+          <p>Every tool executes instantly without server roundtrips. Tailored for developers, SEO specialists, marketers, and freelancers.</p>
         </div>
 
-        <div class="tool-grid">
-          <a class="tool-card" href="#meta-generator"><span class="icon">MT</span><h3>Meta Tag Generator</h3><p>Create SEO-ready title and description tags.</p><em>Open tool →</em></a>
-          <a class="tool-card" href="#serp-preview"><span class="icon">SP</span><h3>SERP Preview</h3><p>Preview how your page could appear in Google.</p><em>Open tool →</em></a>
-          <a class="tool-card" href="#robots-generator"><span class="icon">RT</span><h3>Robots.txt Generator</h3><p>Create crawl directives and sitemap references.</p><em>Open tool →</em></a>
-          <a class="tool-card" href="#schema-generator"><span class="icon">SC</span><h3>Schema Generator</h3><p>Generate clean JSON-LD for common website types.</p><em>Open tool →</em></a>
-          <a class="tool-card" href="#utm-builder"><span class="icon">UT</span><h3>UTM Builder</h3><p>Create campaign URLs for analytics tracking.</p><em>Open tool →</em></a>
-          <a class="tool-card" href="#launch-checklist"><span class="icon">LC</span><h3>Launch Checklist</h3><p>Track important SEO, UX and launch tasks.</p><em>Open tool →</em></a>
+        <!-- Category Filter Pills -->
+        <div class="tool-filter-bar" role="tablist" aria-label="Tool category filters">
+          <button class="filter-btn active" data-filter="all">All Tools (6)</button>
+          <button class="filter-btn" data-filter="seo">SEO &amp; Snippets</button>
+          <button class="filter-btn" data-filter="technical">Technical SEO</button>
+          <button class="filter-btn" data-filter="analytics">Analytics</button>
+          <button class="filter-btn" data-filter="qa">Launch QA</button>
+        </div>
+
+        <div class="tool-grid" id="toolCardsGrid">
+          <a class="tool-card" href="#meta-generator" data-category="seo">
+            <span class="icon">MT</span>
+            <h3>Meta Tag Generator</h3>
+            <p>Generate SEO title, description, Open Graph, and Twitter card tags with live character counters.</p>
+            <em>Open tool &rarr;</em>
+          </a>
+          <a class="tool-card" href="#serp-preview" data-category="seo">
+            <span class="icon">SP</span>
+            <h3>SERP Preview</h3>
+            <p>Simulate desktop and mobile Google search engine results pages with pixel truncation alerts.</p>
+            <em>Open tool &rarr;</em>
+          </a>
+          <a class="tool-card" href="#robots-generator" data-category="technical">
+            <span class="icon">RT</span>
+            <h3>Robots.txt Generator</h3>
+            <p>Create search crawl rules with quick presets for WordPress, Shopify, or block directives.</p>
+            <em>Open tool &rarr;</em>
+          </a>
+          <a class="tool-card" href="#schema-generator" data-category="technical">
+            <span class="icon">SC</span>
+            <h3>Schema Generator</h3>
+            <p>Generate valid JSON-LD structured data for Organization, Local Business, Article, FAQ, and Products.</p>
+            <em>Open tool &rarr;</em>
+          </a>
+          <a class="tool-card" href="#utm-builder" data-category="analytics">
+            <span class="icon">UT</span>
+            <h3>UTM Builder</h3>
+            <p>Build tracked campaign URLs with quick presets for Google Ads, Facebook, LinkedIn, and newsletters.</p>
+            <em>Open tool &rarr;</em>
+          </a>
+          <a class="tool-card" href="#launch-checklist" data-category="qa">
+            <span class="icon">LC</span>
+            <h3>Launch Checklist</h3>
+            <p>Categorized pre-launch audit covering SEO, performance, security, and tracking with export options.</p>
+            <em>Open tool &rarr;</em>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Stacked Interactive Tool Shells -->
     <section class="section tools-area">
       <div class="container stacked-tools">
-        <article class="tool-shell" id="meta-generator">
-          <div class="tool-intro"><span class="tool-kicker">SEO TOOL</span><h2>Meta Tag Generator</h2><p>Create page metadata and copy it directly into your HTML.</p></div>
+        
+        <!-- 1. Meta Tag Generator -->
+        <article class="tool-shell" id="meta-generator" data-category="seo">
+          <div class="tool-intro">
+            <span class="tool-kicker">SEO Tool</span>
+            <h2>Meta Tag Generator</h2>
+            <p>Generate HTML meta tags, Open Graph preview tags, and Twitter Cards with real-time character counters.</p>
+          </div>
           <div class="tool-layout">
             <div class="form-card">
-              <label>Page title <span id="titleCount">0/60</span></label>
-              <input id="metaTitle" type="text" maxlength="90" placeholder="e.g. Web Design Services in Austin" />
-              <label>Meta description <span id="descCount">0/160</span></label>
-              <textarea id="metaDesc" rows="4" maxlength="220" placeholder="Describe the page in a useful, click-worthy way..."></textarea>
-              <label>Canonical URL</label>
-              <input id="canonicalUrl" type="url" placeholder="https://example.com/page" />
-              <button class="btn action" data-action="generate-meta">Generate tags</button>
+              <label for="metaTitle">Page Title <span id="titleCount">0/60</span></label>
+              <input id="metaTitle" type="text" maxlength="90" placeholder="e.g. Modern Web Development Agency in Austin" />
+
+              <label for="metaDesc">Meta Description <span id="descCount">0/160</span></label>
+              <textarea id="metaDesc" rows="3" maxlength="220" placeholder="A compelling, click-worthy summary that entices users to visit your website..."></textarea>
+
+              <div class="form-row">
+                <div>
+                  <label for="canonicalUrl">Canonical URL</label>
+                  <input id="canonicalUrl" type="url" placeholder="https://example.com/page" />
+                </div>
+                <div>
+                  <label for="ogImageUrl">Social Image URL (OG)</label>
+                  <input id="ogImageUrl" type="url" placeholder="https://example.com/og-image.jpg" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="twitterCardType">Twitter Card Format</label>
+                  <select id="twitterCardType">
+                    <option value="summary_large_image">Large Image Card (Recommended)</option>
+                    <option value="summary">Standard Summary Card</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="twitterHandle">Twitter Handle / Creator</label>
+                  <input id="twitterHandle" type="text" placeholder="@yourhandle" />
+                </div>
+              </div>
+
+              <label for="robotsMeta">Robots Indexing Directive</label>
+              <select id="robotsMeta">
+                <option value="index, follow">index, follow (Standard Default)</option>
+                <option value="noindex, follow">noindex, follow (Hide from search, follow links)</option>
+                <option value="index, nofollow">index, nofollow (Show in search, don't follow links)</option>
+                <option value="noindex, nofollow">noindex, nofollow (Complete exclusion)</option>
+              </select>
+
+              <div class="action-row">
+                <button class="btn" id="generateMetaBtn" type="button">Regenerate Tags</button>
+                <button class="btn btn-ghost" id="syncToSerpBtn" type="button" title="Copy title and URL directly to SERP preview">Sync to SERP Preview &rarr;</button>
+              </div>
             </div>
+
             <div class="output-card">
-              <div class="output-head"><strong>Generated HTML</strong><button class="copy-btn" data-copy="metaOutput">Copy</button></div>
+              <div class="output-head">
+                <strong>Generated HTML &lt;head&gt; Tags</strong>
+                <button class="copy-btn" data-copy="metaOutput">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
               <pre id="metaOutput">&lt;!-- Your generated meta tags will appear here --&gt;</pre>
             </div>
           </div>
         </article>
 
-        <article class="tool-shell" id="serp-preview">
-          <div class="tool-intro"><span class="tool-kicker">SEO TOOL</span><h2>SERP Preview</h2><p>See a simplified desktop search snippet before publishing.</p></div>
+        <!-- 2. SERP Preview -->
+        <article class="tool-shell" id="serp-preview" data-category="seo">
+          <div class="tool-intro">
+            <span class="tool-kicker">SEO Tool</span>
+            <h2>Google SERP Snippet Preview</h2>
+            <p>Visualize how your website appears on Google Search with realistic desktop and mobile styling.</p>
+          </div>
           <div class="tool-layout">
             <div class="form-card">
-              <label>Title</label><input id="serpTitle" placeholder="Your page title" />
-              <label>URL</label><input id="serpUrl" placeholder="https://example.com/your-page" />
-              <label>Description</label><textarea id="serpDesc" rows="4" placeholder="Your meta description"></textarea>
+              <label for="serpTitle">Page Title</label>
+              <input id="serpTitle" placeholder="e.g. Modern Web Development Agency in Austin" />
+
+              <label for="serpUrl">Display URL</label>
+              <input id="serpUrl" placeholder="https://example.com/services/web-design" />
+
+              <label for="serpDesc">Meta Description</label>
+              <textarea id="serpDesc" rows="3" placeholder="Craft high-performance websites with modern web standards..."></textarea>
+
+              <div class="form-row">
+                <div>
+                  <label for="serpSiteName">Site Name (Brand)</label>
+                  <input id="serpSiteName" placeholder="Siteflux Studio" />
+                </div>
+                <div>
+                  <label>Snippet Health</label>
+                  <div style="margin-top:8px;">
+                    <span id="serpPixelWarning" class="pixel-badge">Length: Optimal</span>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="output-card serp-wrap">
-              <div class="google-result">
-                <div id="serpUrlOut" class="g-url">https://example.com/your-page</div>
-                <div id="serpTitleOut" class="g-title">Your page title</div>
-                <div id="serpDescOut" class="g-desc">Your meta description will appear here as a simplified preview.</div>
+              <div class="serp-controls">
+                <strong>Google Search Preview</strong>
+                <div class="mode-toggle">
+                  <button type="button" class="mode-btn active" id="serpModeDesktop">Desktop</button>
+                  <button type="button" class="mode-btn" id="serpModeMobile">Mobile</button>
+                </div>
+              </div>
+
+              <!-- Interactive Search Box Mockup -->
+              <div id="googleResultBox" class="google-result-box">
+                <div class="g-source-row">
+                  <div class="g-favicon" id="serpFavicon">S</div>
+                  <div class="g-source-meta">
+                    <span class="g-sitename" id="serpSiteNameOut">Siteflux Studio</span>
+                    <span class="g-url" id="serpUrlOut">https://example.com/services/web-design</span>
+                  </div>
+                </div>
+                <div class="g-title" id="serpTitleOut">Modern Web Development Agency in Austin</div>
+                <div class="g-desc" id="serpDescOut">Craft high-performance websites with modern web standards and responsive aesthetics.</div>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="tool-shell" id="robots-generator">
-          <div class="tool-intro"><span class="tool-kicker">TECHNICAL SEO</span><h2>Robots.txt Generator</h2><p>Generate a basic robots.txt file with allow/disallow rules.</p></div>
+        <!-- 3. Robots.txt Generator -->
+        <article class="tool-shell" id="robots-generator" data-category="technical">
+          <div class="tool-intro">
+            <span class="tool-kicker">Technical SEO</span>
+            <h2>Robots.txt Generator</h2>
+            <p>Create clean crawler directives, disallow sensitive paths, and declare your sitemap reference.</p>
+          </div>
           <div class="tool-layout">
             <div class="form-card">
-              <label>User-agent</label><input id="robotAgent" value="*" />
-              <label>Disallow path</label><input id="robotDisallow" placeholder="/admin/" />
-              <label>Allow path</label><input id="robotAllow" placeholder="/public/" />
-              <label>Sitemap URL</label><input id="robotSitemap" placeholder="https://example.com/sitemap.xml" />
-              <button class="btn action" data-action="generate-robots">Generate robots.txt</button>
+              <label for="robotPreset">Configuration Preset</label>
+              <select id="robotPreset">
+                <option value="custom">Custom Configuration</option>
+                <option value="allow-all" selected>Allow All Web Crawlers (Standard)</option>
+                <option value="block-all">Block All Crawlers (Staging / Private)</option>
+                <option value="wordpress">WordPress Standard (/wp-admin/ disallow)</option>
+                <option value="ecommerce">E-Commerce (/cart/, /checkout/ disallow)</option>
+              </select>
+
+              <label for="robotAgent">User-Agent</label>
+              <input id="robotAgent" value="*" placeholder="*" />
+
+              <label for="robotDisallow">Disallow Paths <span class="help-text">(One path per line)</span></label>
+              <textarea id="robotDisallow" rows="3" placeholder="/admin/&#10;/private/&#10;/checkout/"></textarea>
+
+              <label for="robotAllow">Allow Paths <span class="help-text">(One path per line)</span></label>
+              <input id="robotAllow" placeholder="/public/" />
+
+              <div class="form-row">
+                <div>
+                  <label for="robotSitemap">XML Sitemap URL</label>
+                  <input id="robotSitemap" placeholder="https://example.com/sitemap.xml" />
+                </div>
+                <div>
+                  <label for="robotCrawlDelay">Crawl Delay (Seconds, Optional)</label>
+                  <input id="robotCrawlDelay" type="number" min="0" max="60" placeholder="e.g. 5" />
+                </div>
+              </div>
+
+              <div class="action-row">
+                <button class="btn" id="generateRobotsBtn" type="button">Generate robots.txt</button>
+                <button class="btn btn-ghost" id="downloadRobotsBtn" type="button">Download robots.txt</button>
+              </div>
             </div>
+
             <div class="output-card">
-              <div class="output-head"><strong>robots.txt</strong><button class="copy-btn" data-copy="robotsOutput">Copy</button></div>
-              <pre id="robotsOutput">User-agent: *\nDisallow:</pre>
+              <div class="output-head">
+                <strong>robots.txt Directives</strong>
+                <button class="copy-btn" data-copy="robotsOutput">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre id="robotsOutput">User-agent: *
+Disallow:
+Sitemap: https://example.com/sitemap.xml</pre>
             </div>
           </div>
         </article>
 
-        <article class="tool-shell" id="schema-generator">
-          <div class="tool-intro"><span class="tool-kicker">STRUCTURED DATA</span><h2>Schema Generator</h2><p>Create JSON-LD for an Organization or Local Business.</p></div>
+        <!-- 4. Schema Generator -->
+        <article class="tool-shell" id="schema-generator" data-category="technical">
+          <div class="tool-intro">
+            <span class="tool-kicker">Structured Data</span>
+            <h2>Schema JSON-LD Generator</h2>
+            <p>Generate Google-compliant structured data for Organizations, Local Businesses, Articles, FAQs, and Products.</p>
+          </div>
           <div class="tool-layout">
             <div class="form-card">
-              <label>Schema type</label>
-              <select id="schemaType"><option value="Organization">Organization</option><option value="LocalBusiness">Local Business</option></select>
-              <label>Name</label><input id="schemaName" placeholder="Acme Studio" />
-              <label>Website URL</label><input id="schemaUrl" placeholder="https://example.com" />
-              <label>Logo URL</label><input id="schemaLogo" placeholder="https://example.com/logo.png" />
-              <label>Phone</label><input id="schemaPhone" placeholder="+1 555 123 4567" />
-              <button class="btn action" data-action="generate-schema">Generate JSON-LD</button>
+              <label for="schemaType">Schema Type</label>
+              <select id="schemaType">
+                <option value="Organization" selected>Organization / Company</option>
+                <option value="LocalBusiness">Local Business (with Address &amp; Geo)</option>
+                <option value="Article">Article / Blog Post</option>
+                <option value="FAQPage">FAQ Page</option>
+                <option value="Product">Product / E-Commerce</option>
+              </select>
+
+              <!-- Common Fields -->
+              <div id="schemaCommonFields">
+                <label for="schemaName">Name / Title</label>
+                <input id="schemaName" placeholder="e.g. Acme Studio" />
+
+                <label for="schemaUrl">Canonical URL</label>
+                <input id="schemaUrl" placeholder="https://example.com" />
+
+                <label for="schemaLogo">Logo / Image URL</label>
+                <input id="schemaLogo" placeholder="https://example.com/logo.png" />
+              </div>
+
+              <!-- LocalBusiness Specific Fields -->
+              <div id="localBusinessFields" style="display:none;" class="form-card" style="padding:14px; background:var(--bg-tertiary);">
+                <label for="schemaPhone">Telephone</label>
+                <input id="schemaPhone" placeholder="+1 555 123 4567" />
+
+                <label for="schemaStreet">Street Address</label>
+                <input id="schemaStreet" placeholder="123 Innovation Way" />
+
+                <div class="form-row">
+                  <div>
+                    <label for="schemaCity">City</label>
+                    <input id="schemaCity" placeholder="Austin" />
+                  </div>
+                  <div>
+                    <label for="schemaPostal">Postal Code</label>
+                    <input id="schemaPostal" placeholder="78701" />
+                  </div>
+                </div>
+
+                <label for="schemaCountry">Country Code</label>
+                <input id="schemaCountry" placeholder="US" />
+              </div>
+
+              <!-- Article Specific Fields -->
+              <div id="articleFields" style="display:none;" class="form-card">
+                <label for="schemaHeadline">Headline</label>
+                <input id="schemaHeadline" placeholder="Complete Guide to SEO in 2026" />
+
+                <div class="form-row">
+                  <div>
+                    <label for="schemaAuthor">Author Name</label>
+                    <input id="schemaAuthor" placeholder="Jane Doe" />
+                  </div>
+                  <div>
+                    <label for="schemaDatePublished">Publish Date</label>
+                    <input id="schemaDatePublished" type="date" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQPage Specific Fields -->
+              <div id="faqFields" style="display:none;" class="form-card">
+                <label for="schemaFaqQ1">Question 1</label>
+                <input id="schemaFaqQ1" placeholder="What are your service hours?" />
+                <label for="schemaFaqA1">Answer 1</label>
+                <textarea id="schemaFaqA1" rows="2" placeholder="We are open Monday to Friday 9am to 6pm."></textarea>
+
+                <label for="schemaFaqQ2">Question 2</label>
+                <input id="schemaFaqQ2" placeholder="Do you provide free consultations?" />
+                <label for="schemaFaqA2">Answer 2</label>
+                <textarea id="schemaFaqA2" rows="2" placeholder="Yes, all initial discovery calls are 100% complimentary."></textarea>
+              </div>
+
+              <!-- Product Specific Fields -->
+              <div id="productFields" style="display:none;" class="form-card">
+                <div class="form-row">
+                  <div>
+                    <label for="schemaProdPrice">Price</label>
+                    <input id="schemaProdPrice" type="number" step="0.01" placeholder="49.99" />
+                  </div>
+                  <div>
+                    <label for="schemaProdCurrency">Currency</label>
+                    <input id="schemaProdCurrency" value="USD" placeholder="USD" />
+                  </div>
+                </div>
+                <label for="schemaProdAvail">Availability</label>
+                <select id="schemaProdAvail">
+                  <option value="https://schema.org/InStock">In Stock</option>
+                  <option value="https://schema.org/PreOrder">Pre-Order</option>
+                  <option value="https://schema.org/OutOfStock">Out of Stock</option>
+                </select>
+              </div>
+
+              <div style="margin-top:6px;">
+                <label style="cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                  <input type="checkbox" id="schemaWrapScript" checked style="width:auto;" />
+                  <span>Wrap in &lt;script type="application/ld+json"&gt;</span>
+                </label>
+              </div>
+
+              <div class="action-row">
+                <button class="btn" id="generateSchemaBtn" type="button">Generate JSON-LD</button>
+                <a class="btn btn-ghost" id="testSchemaBtn" target="_blank" rel="noopener" href="https://search.google.com/test/rich-results">Test in Google ↗</a>
+              </div>
             </div>
+
             <div class="output-card">
-              <div class="output-head"><strong>JSON-LD</strong><button class="copy-btn" data-copy="schemaOutput">Copy</button></div>
-              <pre id="schemaOutput">{\n  "@context": "https://schema.org"\n}</pre>
+              <div class="output-head">
+                <strong>JSON-LD Markup</strong>
+                <button class="copy-btn" data-copy="schemaOutput">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre id="schemaOutput">{
+  "@context": "https://schema.org"
+}</pre>
             </div>
           </div>
         </article>
 
-        <article class="tool-shell" id="utm-builder">
-          <div class="tool-intro"><span class="tool-kicker">ANALYTICS</span><h2>UTM Builder</h2><p>Create trackable campaign URLs for Google Analytics and other analytics platforms.</p></div>
+        <!-- 5. UTM Builder -->
+        <article class="tool-shell" id="utm-builder" data-category="analytics">
+          <div class="tool-intro">
+            <span class="tool-kicker">Analytics</span>
+            <h2>UTM Campaign Builder</h2>
+            <p>Generate precise marketing campaign tracking links for Google Analytics 4, Mixpanel, and ad platforms.</p>
+          </div>
           <div class="tool-layout">
             <div class="form-card">
-              <label>Website URL</label><input id="utmUrl" placeholder="https://example.com/landing-page" />
-              <label>Campaign source</label><input id="utmSource" placeholder="newsletter" />
-              <label>Campaign medium</label><input id="utmMedium" placeholder="email" />
-              <label>Campaign name</label><input id="utmCampaign" placeholder="summer_launch" />
-              <label>Campaign content (optional)</label><input id="utmContent" placeholder="hero_button" />
-              <button class="btn action" data-action="generate-utm">Build URL</button>
+              <!-- Preset Channels -->
+              <label>Quick Channel Presets</label>
+              <div class="presets-bar" id="utmPresets">
+                <button type="button" class="preset-chip" data-source="google" data-medium="cpc" data-campaign="search_promo">Google Ads</button>
+                <button type="button" class="preset-chip" data-source="facebook" data-medium="social" data-campaign="retargeting">Facebook / Meta</button>
+                <button type="button" class="preset-chip" data-source="newsletter" data-medium="email" data-campaign="weekly_digest">Email Newsletter</button>
+                <button type="button" class="preset-chip" data-source="linkedin" data-medium="social" data-campaign="b2b_launch">LinkedIn</button>
+                <button type="button" class="preset-chip" data-source="twitter" data-medium="social" data-campaign="organic_tweet">Twitter / X</button>
+              </div>
+
+              <label for="utmUrl">Website Destination URL <span style="color:var(--accent); font-weight:700;">*Required</span></label>
+              <input id="utmUrl" type="url" placeholder="https://example.com/landing-page" />
+
+              <div class="form-row">
+                <div>
+                  <label for="utmSource">Campaign Source <span class="help-text">(utm_source)</span></label>
+                  <input id="utmSource" placeholder="e.g. google, newsletter" />
+                </div>
+                <div>
+                  <label for="utmMedium">Campaign Medium <span class="help-text">(utm_medium)</span></label>
+                  <input id="utmMedium" placeholder="e.g. cpc, email, banner" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="utmCampaign">Campaign Name <span class="help-text">(utm_campaign)</span></label>
+                  <input id="utmCampaign" placeholder="e.g. summer_launch_2026" />
+                </div>
+                <div>
+                  <label for="utmTerm">Campaign Term <span class="help-text">(utm_term, Optional)</span></label>
+                  <input id="utmTerm" placeholder="e.g. web+development+austin" />
+                </div>
+              </div>
+
+              <label for="utmContent">Campaign Content <span class="help-text">(utm_content, Optional)</span></label>
+              <input id="utmContent" placeholder="e.g. hero_cta_button, sidebar_banner" />
+
+              <div class="action-row">
+                <button class="btn" id="generateUtmBtn" type="button">Build Tracked URL</button>
+                <a class="btn btn-ghost" id="openUtmBtn" target="_blank" rel="noopener" style="display:none;">Test Link ↗</a>
+              </div>
             </div>
+
             <div class="output-card">
-              <div class="output-head"><strong>Campaign URL</strong><button class="copy-btn" data-copy="utmOutput">Copy</button></div>
-              <pre id="utmOutput">Your campaign URL will appear here.</pre>
+              <div class="output-head">
+                <strong>Generated Campaign URL</strong>
+                <button class="copy-btn" data-copy="utmOutput">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre id="utmOutput">https://example.com/landing-page?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=search_promo</pre>
             </div>
           </div>
         </article>
 
-        <article class="tool-shell" id="launch-checklist">
-          <div class="tool-intro"><span class="tool-kicker">LAUNCH QA</span><h2>Website Launch Checklist</h2><p>Tick tasks as you complete them. Progress is saved locally in your browser.</p></div>
+        <!-- 6. Launch Checklist -->
+        <article class="tool-shell" id="launch-checklist" data-category="qa">
+          <div class="tool-intro">
+            <span class="tool-kicker">Launch QA</span>
+            <h2>Website Launch Audit Checklist</h2>
+            <p>Comprehensive pre-flight checklist covering SEO, performance, security, and tracking. Automatically saved to your local browser storage.</p>
+          </div>
           <div class="checklist-card">
-            <div class="progress-row"><strong id="progressText">0 of 12 complete</strong><span id="progressPercent">0%</span></div>
+            <div class="checklist-meta-row">
+              <div class="progress-info">
+                <strong id="progressText">0 of 16 complete</strong>
+                <span>tasks verified</span>
+              </div>
+              <span id="progressPercent" class="progress-percent-badge">0%</span>
+            </div>
+            
             <div class="meter big"><i id="progressBar" style="width:0%"></i></div>
-            <div id="checklist" class="checklist"></div>
-            <button id="resetChecklist" class="btn btn-ghost reset-btn">Reset checklist</button>
+
+            <!-- Dynamic Checklist by Category -->
+            <div id="checklistContainer"></div>
+
+            <!-- Add Custom Task Form -->
+            <div class="add-task-row">
+              <input type="text" id="newChecklistInput" placeholder="Add custom launch task (e.g. 'Verify Stripe webhook endpoint')..." />
+              <button class="btn btn-secondary" id="addChecklistBtn" type="button">Add Task</button>
+            </div>
+
+            <div class="checklist-actions-row">
+              <button id="resetChecklist" class="btn btn-ghost" type="button">Reset All Tasks</button>
+              <button id="exportChecklistMarkdown" class="btn btn-secondary" type="button">Export as Markdown</button>
+            </div>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- Why Us Section -->
     <section class="section soft" id="why">
       <div class="container why-grid">
-        <div><span class="eyebrow">Built for real workflows</span><h2>Useful enough for professionals. Simple enough for everyone.</h2><p>WebLaunch Tools is designed around common tasks that usually require separate websites, browser extensions, or paid SEO suites.</p></div>
+        <div>
+          <span class="eyebrow">Built For Real-World Workflows</span>
+          <h2>Professional utilities without the software bloat.</h2>
+          <p>Siteflux replaces fragmented bookmarks, ad-ridden web utilities, and paid extensions with a unified suite built specifically for web professionals.</p>
+        </div>
         <div class="benefit-grid">
-          <div><b>Fast</b><span>No account setup or onboarding.</span></div>
-          <div><b>Private</b><span>Most processing happens in your browser.</span></div>
-          <div><b>Focused</b><span>One job per tool, without clutter.</span></div>
-          <div><b>Expandable</b><span>Easy foundation for dozens of future tools.</span></div>
+          <div>
+            <b>Instant &amp; Fast</b>
+            <span>Zero server latency. Everything computes immediately on your local machine.</span>
+          </div>
+          <div>
+            <b>100% Private</b>
+            <span>Your domains, keywords, and campaign secrets never leave your browser sandbox.</span>
+          </div>
+          <div>
+            <b>No Accounts Needed</b>
+            <span>Jump right in. No mandatory email captures, passwords, or paywalls.</span>
+          </div>
+          <div>
+            <b>Developer-Friendly</b>
+            <span>Clean syntax, copy-ready outputs, and schema-compliant JSON-LD markup.</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- FAQ Section -->
     <section class="section" id="faq">
       <div class="container faq-wrap">
-        <div class="section-head left"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
-        <details open><summary>Are these tools free?</summary><p>Yes. This starter website is designed around free, browser-based utilities with no account required.</p></details>
-        <details><summary>Do the tools upload my data?</summary><p>The included tools process entered values in the browser. If you later add APIs, file uploads or cloud features, you should clearly document those behaviors.</p></details>
-        <details><summary>Can I add more tools later?</summary><p>Yes. The layout is intentionally modular so you can add new tool cards and full tool sections without rebuilding the site architecture.</p></details>
+        <div class="section-head left">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <details open>
+          <summary>Are these tools completely free to use?</summary>
+          <p>Yes. Siteflux is 100% free and open. There are no subscriptions, hidden limits, or user registration requirements.</p>
+        </details>
+        <details>
+          <summary>Does Siteflux store or track any of my data?</summary>
+          <p>No. All calculations, previews, and generators run locally in your client's JavaScript engine. Checklist progress is stored securely in your browser's private localStorage.</p>
+        </details>
+        <details>
+          <summary>Can I use this offline or install it as a desktop shortcut?</summary>
+          <p>Yes. Because there is no backend server requirement, you can save the page or run it entirely offline with complete functionality.</p>
+        </details>
+        <details>
+          <summary>How can I export my launch checklist to share with my team or client?</summary>
+          <p>Click the "Export as Markdown" button at the bottom of the checklist. It generates a formatted markdown task list ready to paste directly into GitHub Issues, Notion, Slack, or Linear.</p>
+        </details>
       </div>
     </section>
   </main>
 
+  <!-- Global Site Footer -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="#top"><span class="brand-mark">W</span><span>WebLaunch Tools</span></a><p>Simple utilities for better websites, SEO and launches.</p></div>
-      <div><strong>Tools</strong><a href="#meta-generator">Meta Generator</a><a href="#schema-generator">Schema Generator</a><a href="#utm-builder">UTM Builder</a></div>
-      <div><strong>Website</strong><a href="#why">Why Us</a><a href="#faq">FAQ</a><a href="#top">Back to top</a></div>
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark">S</span>
+          <span>Siteflux</span>
+        </a>
+        <p>Free, browser-based website launch utilities for modern developers, marketers, and SEO specialists.</p>
+      </div>
+      <div>
+        <strong>Toolbox</strong>
+        <a href="#meta-generator">Meta Tag Generator</a>
+        <a href="#serp-preview">SERP Preview</a>
+        <a href="#robots-generator">Robots.txt Generator</a>
+        <a href="#schema-generator">Schema JSON-LD</a>
+        <a href="#utm-builder">UTM Campaign Builder</a>
+        <a href="#launch-checklist">Launch Audit Checklist</a>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <a href="#why">Why Siteflux</a>
+        <a href="#faq">FAQ</a>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
     </div>
-    <div class="container copyright">© <span id="year"></span> WebLaunch Tools. Built for faster launches.</div>
+    <div class="container copyright">
+      &copy; <span id="year"></span> Siteflux — WebLaunch Tools. Built for seamless, error-free website launches.
+    </div>
   </footer>
 
-  <div id="toast" class="toast" role="status">Copied</div>
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span id="toastMessage">Copied to clipboard</span>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
