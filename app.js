@@ -1,12 +1,7 @@
-/**
- * Siteflux — WebLaunch Tools
- * Interactive Client-Side Logic & Utilities
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* ==========================================================================
-     1. Helper Utilities
-     ========================================================================== */
+
   const $ = (id) => document.getElementById(id);
   const esc = (s = '') =>
     String(s)
@@ -28,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1800);
   }
 
-  // Copy to clipboard with fallback & button visual state
   async function copyToClipboard(text, triggerBtn = null) {
     if (!text) return;
     let success = false;
@@ -42,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Fallback using textarea execCommand
     if (!success) {
       try {
         const tempTextarea = document.createElement('textarea');
@@ -78,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Global Delegated Copy Buttons
   document.addEventListener('click', (e) => {
     const copyBtn = e.target.closest('[data-copy]');
     if (copyBtn) {
@@ -90,14 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Dynamic Year in Footer
   if ($('year')) {
     $('year').textContent = new Date().getFullYear();
   }
 
-  /* ==========================================================================
-     2. Theme Toggle (Light / Dark Mode)
-     ========================================================================== */
   const themeToggleBtn = $('themeToggleBtn');
   const themeMoonIcon = $('themeMoonIcon');
   const themeSunIcon = $('themeSunIcon');
@@ -131,9 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     3. Category Filter Tabs
-     ========================================================================== */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const toolCards = document.querySelectorAll('.tool-card');
   const toolShells = document.querySelectorAll('.tool-shell');
@@ -163,9 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ==========================================================================
-     4. Tool 1: Meta Tag Generator
-     ========================================================================== */
   const metaTitle = $('metaTitle');
   const metaDesc = $('metaDesc');
   const canonicalUrl = $('canonicalUrl');
@@ -199,19 +181,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const lines = [];
 
-    // Check if any meaningful field has data
     if (!title && !desc && !canonical && !ogImg && !twHandle) {
       metaOutput.textContent = '<!-- Enter a title, description, or URL to generate meta tags -->';
       return;
     }
 
-    // Standard SEO Tags
     if (title) lines.push(`<title>${esc(title)}</title>`);
     if (desc) lines.push(`<meta name="description" content="${esc(desc)}">`);
     if (canonical) lines.push(`<link rel="canonical" href="${esc(canonical)}">`);
     if (robots) lines.push(`<meta name="robots" content="${esc(robots)}">`);
 
-    // Open Graph Tags
     lines.push(`\n<!-- Open Graph / Facebook -->`);
     lines.push(`<meta property="og:type" content="website">`);
     if (title) lines.push(`<meta property="og:title" content="${esc(title)}">`);
@@ -219,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canonical) lines.push(`<meta property="og:url" content="${esc(canonical)}">`);
     if (ogImg) lines.push(`<meta property="og:image" content="${esc(ogImg)}">`);
 
-    // Twitter Tags
     lines.push(`\n<!-- Twitter Card -->`);
     lines.push(`<meta name="twitter:card" content="${esc(twCard)}">`);
     if (twHandle) lines.push(`<meta name="twitter:site" content="${esc(twHandle)}">`);
@@ -247,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     generateMetaBtn.addEventListener('click', generateMetaTags);
   }
 
-  // Sync to SERP preview
   if (syncToSerpBtn) {
     syncToSerpBtn.addEventListener('click', () => {
       if (metaTitle.value) $('serpTitle').value = metaTitle.value;
@@ -260,9 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     5. Tool 2: SERP Snippet Preview
-     ========================================================================== */
   const serpTitle = $('serpTitle');
   const serpUrl = $('serpUrl');
   const serpDesc = $('serpDesc');
@@ -288,10 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
     serpDescOut.textContent = descVal;
     serpSiteNameOut.textContent = siteVal;
 
-    // Favicon letter
     serpFavicon.textContent = siteVal.charAt(0).toUpperCase() || 'S';
 
-    // Title pixel length approximation (~600px cutoff on desktop, ~60 chars)
     const titleLen = titleVal.length;
     if (titleLen > 60) {
       serpPixelWarning.textContent = `Warning: Title may be truncated (${titleLen}/60 chars)`;
@@ -320,9 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     6. Tool 3: Robots.txt Generator
-     ========================================================================== */
   const robotPreset = $('robotPreset');
   const robotAgent = $('robotAgent');
   const robotDisallow = $('robotDisallow');
@@ -415,9 +384,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     7. Tool 4: Schema JSON-LD Generator
-     ========================================================================== */
   const schemaType = $('schemaType');
   const schemaName = $('schemaName');
   const schemaUrl = $('schemaUrl');
@@ -426,7 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const schemaOutput = $('schemaOutput');
   const generateSchemaBtn = $('generateSchemaBtn');
 
-  // Schema Sub-field Containers
   const localBusinessFields = $('localBusinessFields');
   const articleFields = $('articleFields');
   const faqFields = $('faqFields');
@@ -559,9 +524,6 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('input', generateSchemaJson);
   });
 
-  /* ==========================================================================
-     8. Tool 5: UTM Campaign Builder
-     ========================================================================== */
   const utmUrl = $('utmUrl');
   const utmSource = $('utmSource');
   const utmMedium = $('utmMedium');
@@ -611,7 +573,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Preset buttons
   document.querySelectorAll('#utmPresets .preset-chip').forEach((chip) => {
     chip.addEventListener('click', () => {
       utmSource.value = chip.dataset.source || '';
@@ -628,9 +589,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (generateUtmBtn) generateUtmBtn.addEventListener('click', generateUtmUrl);
 
-  /* ==========================================================================
-     9. Tool 6: Website Launch Checklist
-     ========================================================================== */
   const defaultChecklistCategories = [
     {
       name: 'SEO & Metadata',
@@ -683,14 +641,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const newChecklistInput = $('newChecklistInput');
   const addChecklistBtn = $('addChecklistBtn');
 
-  // Load Saved State & Custom Tasks
   function getChecklistState() {
     try {
-      // Check for new ID-based storage
       const saved = localStorage.getItem('siteflux-checklist');
       if (saved) return JSON.parse(saved);
 
-      // Backward compatibility with legacy index-based array storage
       const legacy = localStorage.getItem('weblaunch-checklist');
       if (legacy) {
         const arr = JSON.parse(legacy);
@@ -734,7 +689,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalTasks = 0;
     let completedTasks = 0;
 
-    // Render categorized standard tasks
     defaultChecklistCategories.forEach((cat) => {
       const groupEl = document.createElement('div');
       groupEl.className = 'checklist-category-group';
@@ -780,7 +734,6 @@ document.addEventListener('DOMContentLoaded', () => {
       checklistContainer.appendChild(groupEl);
     });
 
-    // Render custom tasks if any exist
     if (customTasks.length > 0) {
       const customGroup = document.createElement('div');
       customGroup.className = 'checklist-category-group';
@@ -826,14 +779,12 @@ document.addEventListener('DOMContentLoaded', () => {
       checklistContainer.appendChild(customGroup);
     }
 
-    // Update progress meter
     const pct = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
     progressText.textContent = `${completedTasks} of ${totalTasks} complete`;
     progressPercent.textContent = `${pct}%`;
     progressBar.style.width = `${pct}%`;
   }
 
-  // Add Custom Task
   if (addChecklistBtn && newChecklistInput) {
     const handleAddTask = () => {
       const text = newChecklistInput.value.trim();
@@ -856,7 +807,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Reset Checklist
   if (resetChecklist) {
     resetChecklist.addEventListener('click', () => {
       if (confirm('Are you sure you want to reset all checklist progress?')) {
@@ -869,7 +819,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Export as Markdown
   if (exportChecklistMarkdown) {
     exportChecklistMarkdown.addEventListener('click', () => {
       const state = getChecklistState();
@@ -899,9 +848,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     10. Initial Invocations
-     ========================================================================== */
   updateMetaCounters();
   generateMetaTags();
   updateSerpPreview();
