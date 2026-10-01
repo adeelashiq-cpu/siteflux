@@ -1,5 +1,15 @@
 [build]
   publish = "."
+  command = "SITE_URL=${URL%/} && sed -i \"s|__SITE_URL__|${SITE_URL}|g\" index.html"
 
 [context.test]
-  command = "printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > _headers"
+  command = "SITE_URL=${DEPLOY_PRIME_URL%/} && sed -i \"s|__SITE_URL__|${SITE_URL}|g\" index.html && printf '/*\\n  X-Robots-Tag: noindex, nofollow\\n' > _headers"
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
